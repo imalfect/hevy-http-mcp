@@ -27,6 +27,6 @@ export function loadConfig(): Config {
     hevyApiKey: requireEnv("HEVY_API_KEY"),
     mcpApiKey: requireEnv("MCP_API_KEY"),
     port: parseInt(process.env["PORT"] ?? "3000", 10),
-    host: process.env["HOST"] ?? "0.0.0.0",
+    host: process.env["HOST"] ?? "127.0.0.1",
   };
 }
