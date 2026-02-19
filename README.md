@@ -1,8 +1,14 @@
 # hevy-http-mcp
 
-An HTTP Model Context Protocol (MCP) server for the [Hevy](https://www.hevyapp.com/) workout tracker API, built with [Elysia](https://elysiajs.com/), [elysia-mcp](https://github.com/kerlos/elysia-mcp), and [ofetch](https://github.com/unjs/ofetch).
+An HTTP Model Context Protocol (MCP) server for the [Hevy](https://www.hevyapp.com/) workout tracker API.
+This project was heavily inspired from [@chrisdoc's hevy-mcp](https://github.com/chrisdoc/hevy-mcp). That solution focused on the stdio transport, and I needed HTTP, hence this project was born.
 
-Exposes all core Hevy API operations (workouts, routines, exercise templates, routine folders) as MCP tools over HTTP transport, so any MCP-compatible client can connect remotely — no stdio required.
+This MCP is useful if you want to connect your workout data to AI chatbots like [Poke](https://poke.ai).
+
+Exposes all core Hevy API operations (workouts, routines, exercise templates, routine folders) as MCP tools over HTTP transport, so any MCP-compatible client can connect remotely.
+
+## Tech Stack
+Built with [Elysia](https://elysiajs.com/), [elysia-mcp](https://github.com/kerlos/elysia-mcp), and [ofetch](https://github.com/unjs/ofetch).
 
 ## Prerequisites
 
@@ -52,6 +58,7 @@ All configuration is done via environment variables (or a `.env` file).
 | `HEVY_API_KEY` | **Yes** | — | Your Hevy API key |
 | `MCP_API_KEY` | **Yes** | — | A secret key clients must send to authenticate with this MCP server |
 | `PORT` | No | `3000` | HTTP port |
+| `HOST` | No | `127.0.0.1` | HTTP host |
 | `LOG_LEVEL` | No | `info` | Logging verbosity (`debug`, `info`, `warn`, `error`) |
 
 ## Authentication
@@ -144,6 +151,7 @@ hevy-http-mcp/
 ```
 
 ## Security
+**NOTE:** This project was coded using Claude. AI can make mistakes and therefore I cannot guarantee that the code is 100% secure
 
 - **No secrets in code** — all credentials are loaded from environment variables.
 - `.env` is gitignored; only `.env.example` (with placeholder values) is committed.
