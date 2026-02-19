@@ -7,7 +7,7 @@ This MCP is useful if you want to connect your workout data to AI chatbots like 
 
 Exposes all core Hevy API operations (workouts, routines, exercise templates, routine folders) as MCP tools over HTTP transport, so any MCP-compatible client can connect remotely.
 
-<img width="603" height="1311" alt="IMG_5791" src="https://github.com/user-attachments/assets/635a9953-902e-4b5b-8395-e93d3cbd4a60" />
+<img width="250" alt="IMG_5791" src="https://github.com/user-attachments/assets/635a9953-902e-4b5b-8395-e93d3cbd4a60" />
 
 ## Tech Stack
 Built with [Elysia](https://elysiajs.com/), [elysia-mcp](https://github.com/kerlos/elysia-mcp), and [ofetch](https://github.com/unjs/ofetch).
